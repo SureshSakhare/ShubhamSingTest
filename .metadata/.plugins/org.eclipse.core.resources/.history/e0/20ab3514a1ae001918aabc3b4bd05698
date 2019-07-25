@@ -1,0 +1,14 @@
+package com.test.filereader;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Service
+public class FileReaderService {
+
+	@RequestMapping("/readfile")
+	String namesFromFile() {
+		return "nothing";
+	}
+
+}

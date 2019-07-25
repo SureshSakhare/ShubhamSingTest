@@ -1,0 +1,28 @@
+package com.test.filereader;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+@Service
+public class FileReaderService {
+
+	List<Names> namesFromFile(MultipartFile names) {
+		List<String> outputString = new ArrayList<>();
+		List<Names> outputNames = new ArrayList<>();
+		try {
+			byte[] nameBytes = names.getBytes();
+			String str = Arrays.toString(nameBytes);
+			outputString = Arrays.asList(str.split(" "));
+			outputString.stream().forEach(name -> outputNames.add(new Names(name)));
+			outputNames.forEach(System.out::println);
+		} catch (Exception e) {
+			System.out.println(e.getStackTrace().toString());
+		}
+		return outputNames;
+	}
+
+}

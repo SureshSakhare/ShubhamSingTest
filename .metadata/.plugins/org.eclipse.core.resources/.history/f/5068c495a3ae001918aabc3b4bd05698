@@ -1,0 +1,36 @@
+package com.test.filereader;
+
+import java.awt.List;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RequestMapping("/api")
+@RestController
+public class FileReaderController {
+
+	@Autowired
+	FileReaderService fileReaderService;
+
+	@RequestMapping(value = "/readfile", method = RequestMethod.POST, consumes = MediaType.APPLICATION_OCTET_STREAM_VALUE)
+	String namesFromFile(@RequestBody(required = false) String usernames) throws IOException {
+		ArrayList<String> names = new ArrayList<String>();
+		if (usernames == null) {
+			try (Scanner s = new Scanner(new FileReader("usernames.txt"))) {
+				while (s.hasNext()) {
+					names.add(s.next());
+				}
+			}
+		}
+		return "nothing";
+	}
+
+}

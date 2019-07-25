@@ -1,0 +1,6 @@
+package com.test.filereader;
+
+public class Names {
+	
+	String name;
+}

@@ -1,0 +1,21 @@
+package com.test.filereader;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class FileReaderService {
+
+	String namesFromFile(String names) {
+		List<String> outputString = Arrays.asList(names.split(" "));
+		List<Names> outputNames = new ArrayList<>();
+		outputString.stream().forEach(name -> outputNames.add(name));
+
+		return "";
+	}
+
+}

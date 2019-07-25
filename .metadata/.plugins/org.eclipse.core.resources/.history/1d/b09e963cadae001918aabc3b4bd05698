@@ -1,0 +1,11 @@
+package com.test.filereader;
+
+public class Names {
+
+	public Names(byte[] bytes) {
+		// TODO Auto-generated constructor stub
+	}
+	String name;
+	byte[] names;
+
+}

@@ -1,0 +1,12 @@
+package com.test.filereader;
+
+public class Names implements Serialization {
+
+	String name;
+
+	public Names(String name) {
+		// TODO Auto-generated constructor stub
+		this.name = name;
+	}
+
+}

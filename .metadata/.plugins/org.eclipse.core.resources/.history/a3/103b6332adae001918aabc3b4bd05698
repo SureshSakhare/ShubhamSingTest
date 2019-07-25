@@ -1,0 +1,33 @@
+package com.test.filereader;
+
+public class Names {
+
+	String name;
+
+	public Names() {
+		super();
+	}
+
+	public Names(String name2) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Names(byte[] bytes) {
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Names [name=" + name + "]";
+	}
+	
+	
+
+}

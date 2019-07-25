@@ -1,0 +1,11 @@
+package com.test.filereader;
+
+@SpringBootAppl
+public class FileReaderApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

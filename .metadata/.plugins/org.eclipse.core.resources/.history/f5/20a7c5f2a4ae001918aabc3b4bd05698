@@ -1,0 +1,15 @@
+package com.test.filereader;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Service
+public class FileReaderService {
+
+	String namesFromFile(String names) {
+		List<String> output = names.split(" ");
+		System.out.println(output);
+		return "";
+	}
+
+}

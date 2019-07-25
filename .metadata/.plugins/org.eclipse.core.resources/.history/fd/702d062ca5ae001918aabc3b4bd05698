@@ -1,0 +1,16 @@
+package com.test.filereader;
+
+import java.util.ArrayList;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class FileReaderService {
+
+	String namesFromFile(String names) {
+		String[] output = names.split(" ");
+		System.out.println(Arrays.toString(output));
+		return "";
+	}
+
+}
